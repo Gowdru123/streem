@@ -98,7 +98,7 @@ LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies 
 LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 
-#Direct Link Generator By @Developerr_Bots
+#Direct Link Generator By @AB_BotZ_Update
 DIRECT_GEN_DB = int(environ.get("DIRECT_GEN_DB", "-1001565011277")) # Enter your channel id
-DIRECT_GEN_URL = environ.get("DIRECT_GEN_URL", "https://developerr-bots.xyz/") # https://example.com/
+DIRECT_GEN_URL = environ.get("DIRECT_GEN_URL", "https://hanghogaya.systems/") # https://example.com/
 DIRECT_GEN = bool(DIRECT_GEN_DB and DIRECT_GEN_URL)
