@@ -47,7 +47,7 @@ NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://abmovieshouse1:abmovieshouse1@cluster0.gtacdwd.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "abmovieshouse1")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', '')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
@@ -99,6 +99,6 @@ LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 
 #Direct Link Generator By @Developerr_Bots
-DIRECT_GEN_DB = int(environ.get("DIRECT_GEN_DB", "-1001906907851")) # Enter your channel id
+DIRECT_GEN_DB = int(environ.get("DIRECT_GEN_DB", "-1001565011277")) # Enter your channel id
 DIRECT_GEN_URL = environ.get("DIRECT_GEN_URL", "https://developerr-bots.xyz/") # https://example.com/
 DIRECT_GEN = bool(DIRECT_GEN_DB and DIRECT_GEN_URL)
