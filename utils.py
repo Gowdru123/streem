@@ -644,7 +644,7 @@ async def direct_gen_handler(m: Message):
                 markup = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🎥 Stream 🎥", url=stream_link2),
+                        InlineKeyboardButton("🎥 Stream 🎥", url=stream_link),
                         InlineKeyboardButton("📥 Download 📥", url=download_link)
                     ]
                 ]
@@ -654,7 +654,7 @@ async def direct_gen_handler(m: Message):
                 markup.insert(
                     0,
                     [
-                        InlineKeyboardButton("🎥 Stream 🎥", url=stream_link2),
+                        InlineKeyboardButton("🎥 Stream 🎥", url=stream_link),
                         InlineKeyboardButton("📥 Download 📥", url=download_link)
                     ]
                 )
@@ -665,12 +665,12 @@ async def direct_gen_handler(m: Message):
         await direct_gen_handler(m)
 
 # Direct Link Generator
-async def gen_link(log_msg):
+async def gen_link(log_msg: Message):
     page_link = f"{DIRECT_GEN_URL}watch/{get_hash(log_msg)}{log_msg.id}"
     stream_link = f"{DIRECT_GEN_URL}{log_msg.id}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
     return page_link, stream_link
 
-def get_media_from_message(message: "Message"):
+def get_media_from_message(message: Message):
     media_types = (
         "audio",
         "document",
@@ -682,13 +682,12 @@ def get_media_from_message(message: "Message"):
         "video_note",
     )
     for attr in media_types:
-        if media := getattr(message, attr, None):
+        if (media := getattr(message, attr, None)) is not None:
             return media
 
 def get_name(media_msg: Message) -> str:
     media = get_media_from_message(media_msg)
     return getattr(media, "file_name", "None")
-
 
 def get_hash(media_msg: Message) -> str:
     media = get_media_from_message(media_msg)
