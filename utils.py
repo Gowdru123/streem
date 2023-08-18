@@ -735,9 +735,6 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
             ]
         )
     )
-except Exception as e:
-    print(e)
-
     except UserIsBlocked:
         await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀʜɴ !', show_alert=True)
     except PeerIdInvalid:
