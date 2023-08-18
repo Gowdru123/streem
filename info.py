@@ -18,10 +18,10 @@ API_HASH = environ.get('API_HASH', 'f0f35dbb5b0081cdc8d3c9d5383c4628')
 BOT_TOKEN = environ.get('BOT_TOKEN', "6300021122:AAH2YbAQbE8qQe14SH943kmChjvyQVwrrI0")
 
 # Bot settings
-CACHE_TIME = int(environ.get('CACHE_TIME', 300))
+CACHE_TIME = int(environ.get('CACHE_TIME', 180))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://graph.org/file/b46ec24ce6749ee1a1ceb.jpg https://graph.org/file/f52781b3c908d6ba11b81.jpg https://graph.org/file/ea1cea21d104dbe94bf31.jpg https://graph.org/file/8e70b56baac013d7a29a4.jpg https://graph.org/file/b85689d7fa87bd08fa62b.jpg https://graph.org/file/3ac9458e903b9a6944144.jpg https://graph.org/file/609f307336659cb29c37b.jpg')).split()
+PICS = (environ.get('PICS', 'https://graph.org/file/43e6c59479c7d869bec2e.jpg https://graph.org/file/64804ede93c64c292a842.jpg https://graph.org/file/e1fa4e58918c8e8d5aa0a.jpg https://graph.org/file/bad5da58bb38181693a7a.jpg https://graph.org/file/0a930db0eb217e430c4cf.jpg https://graph.org/file/c2b39ede6dcdbacbf6289.jpg https://graph.org/file/a713b8db5df493b853cad.jpg https://graph.org/file/aae6f3c9135eacb01744c.jpg')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/efd525bc133e1cbd0c966.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/98168a0fe0764b10fe1ea.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/c71f7bc667122cd1be418.jpg")
@@ -99,6 +99,6 @@ LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 
 #Direct Link Generator By @AB_BotZ_Update
-DIRECT_GEN_DB = int(environ.get("DIRECT_GEN_DB", "-1001929954249")) # Enter your channel id
-DIRECT_GEN_URL = environ.get("DIRECT_GEN_URL", "https://file2linkbot.onrender.com/") # https://example.com/
+DIRECT_GEN_DB = int(environ.get("DIRECT_GEN_DB", "-1001731526413")) # Enter your channel id
+DIRECT_GEN_URL = environ.get("DIRECT_GEN_URL", "https://autofilter-file2link-bot.onrender.com/") # https://example.com/
 DIRECT_GEN = bool(DIRECT_GEN_DB and DIRECT_GEN_URL)
