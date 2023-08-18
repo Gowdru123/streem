@@ -730,7 +730,7 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                         reply_markup=InlineKeyboardMarkup(
                             [
                                 [
-                                l           InlineKeyboardButton('Bᴏᴛ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                                l           InlineKeyboardButton("Bᴏᴛ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=CHNL_LNK)
                             ],[
                                 InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/Sujan_Ch")
                                 ]
