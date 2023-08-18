@@ -15,7 +15,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '25502576'))
 API_HASH = environ.get('API_HASH', 'f0f35dbb5b0081cdc8d3c9d5383c4628')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6179110368:AAHYKdYsAVb88wzGNLHxN3JAJ6IdKMQmS1U")
+BOT_TOKEN = environ.get('BOT_TOKEN', "6300021122:AAH2YbAQbE8qQe14SH943kmChjvyQVwrrI0")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -45,16 +45,16 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Earningbot12:Earningbot12@cluster0.1yytumt.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://yogeshchy9997:yogeshchy9997@cluster0.nxr4drz.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Sujan_BotZ")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'nestshortener.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '799f6e6c12bb493a1b1b29bda41f0fded884b5b7')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'greymatterslinks.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', '421c1ce91cdcbb88d4034e6711f8d19859d3c4ca')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001767829947').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
