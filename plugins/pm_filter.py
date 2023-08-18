@@ -67,23 +67,23 @@ async def give_filter(client, message):
         if total_results == 0:
             return
         else:
-            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - @FilmyHub_Adda</b>")
+            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - t.me/+aSW3ErAd9zwwMGY1</b>")
 
-# @Client.on_message(filters.private & filters.text & filters.incoming)
-# async def pm_text(bot, message):
-#     content = message.text
-#     user = message.from_user.first_name
-#     user_id = message.from_user.id
-#     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
-#     if user_id in ADMINS: return # ignore admins
-#     await message.reply_text(
-#          text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://telegram.me/YDMovieZone>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>", disable_web_page_preview=True,
-#          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"telegram.me/YDMovieZone")]])
-#     )
-#     await bot.send_message(
-#         chat_id=LOG_CHANNEL,
-#         text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
-#     )
+ @Client.on_message(filters.private & filters.text & filters.incoming)
+ async def pm_text(bot, message):
+     content = message.text
+     user = message.from_user.first_name
+     user_id = message.from_user.id
+     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
+     if user_id in ADMINS: return # ignore admins
+     await message.reply_text(
+          text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://telegram.me/+aSW3ErAd9zwwMGY1>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>", disable_web_page_preview=True,
+          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/+aSW3ErAd9zwwMGY1")]])
+     )
+     await bot.send_message(
+         chat_id=LOG_CHANNEL,
+         text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
+     )
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
@@ -959,9 +959,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                             protect_content=True if ident == "filep" else False,
                             reply_markup=InlineKeyboardMarkup(
                                 [
-                                [
-                                    InlineKeyboardButton('Rᴇǫᴜᴇsᴛ Gʀᴏᴜᴘ', url=SPRT_CHNL),
-                                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                                [                                                     InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                                 ]
                                 ]
                             )
@@ -1290,7 +1288,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             try:
                 await client.send_message(chat_id=int(from_user), text=f"<b>Hᴇʏ {user.mention}, Sᴏʀʀʏ Yᴏᴜʀ ʀᴇᴏ̨ᴜᴇsᴛ ɪs ᴜɴᴀᴠᴀɪʟᴀʙʟᴇ. Sᴏ ᴏᴜʀ ᴍᴏᴅᴇʀᴀᴛᴏʀs ᴄᴀɴ'ᴛ ᴜᴘʟᴏᴀᴅ ɪᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
             except UserIsBlocked:
-                await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text=f"<b>Hᴇʏ {user.mention}, Sᴏʀʀʏ Yᴏᴜʀ ʀᴇᴜᴇsᴛ ɪs ᴜɴᴀᴠᴀɪʟᴀʙʟᴇ. Sᴏ ᴏᴜʀ ᴍᴏᴅᴇʀᴀᴛᴏʀs ᴄᴀɴ'ᴛ ᴜᴘʟᴏᴀᴅ ɪᴛ.\n\nNᴏᴛᴇ: Tʜɪs ᴍᴇssᴀɢᴇ ɪs sᴇɴᴛ ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ ʙᴇᴄᴀᴜsᴇ ʏᴏᴜ'ᴠᴇ ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ. Tᴏ sᴇɴᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ PM, Mᴜsᴛ ᴜɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
+                await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text=f"<b>Hᴇʏ {user.mention}, Sᴏʀʀʏ Yᴏᴜʀ ʀᴇᴏ̨ᴜᴇsᴛ ɪs ᴜɴᴀᴠᴀɪʟᴀʙʟᴇ. Sᴏ ᴏᴜʀ ᴍᴏᴅᴇʀᴀᴛᴏʀs ᴄᴀɴ'ᴛ ᴜᴘʟᴏᴀᴅ ɪᴛ.\n\nNᴏᴛᴇ: Tʜɪs ᴍᴇssᴀɢᴇ ɪs sᴇɴᴛ ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ ʙᴇᴄᴀᴜsᴇ ʏᴏᴜ'ᴠᴇ ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ. Tᴏ sᴇɴᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ PM, Mᴜsᴛ ᴜɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn2))
         else:
             await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢʜᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
 
@@ -1789,7 +1787,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await client.edit_message_media(
                 query.message.chat.id, 
                 query.message.id, 
-                InputMediaPhoto("https://graph.org/file/de8094f730a10df4e631c.jpg")
+                InputMediaPhoto("https://graph.org/file/a18cf9f447a1c34e5a20a.jpg")
             )
             reply_markup = InlineKeyboardMarkup(btn)
             await query.message.edit_text(
@@ -1811,7 +1809,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
     elif query.data == "chnl_info":
             btn = [[
-                    InlineKeyboardButton("⚜️ Mᴀɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ ⚜️", url=CHNL_LNK)
+                    InlineKeyboardButton("🤖 Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ 🤖", url=CHNL_LNK)
                 ],[
                     InlineKeyboardButton('♙ Hᴏᴍᴇ', callback_data='start'),
                     InlineKeyboardButton('Cʟᴏsᴇ ⊝', callback_data='close_data')
@@ -1990,7 +1988,7 @@ async def auto_filter(client, msg, spoll=False):
             btn = [[
                     InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
                     ]]
-            dlt = await message.reply_sticker('CAACAgIAAxkBAAIBFWTbzDurSS5JY7PS_3zZClgPe_n8AAJxCAAChJRBSW9oCRqmu85zHgQ', reply_markup=InlineKeyboardMarkup(btn))
+            dlt = await message.reply_sticker('CAACAgIAAxkBAAECtcVktT1nnSIDQxFolMoMZkBb-7BUKwACaAEAAhAabSL1Nxwp9hekbx4E', reply_markup=InlineKeyboardMarkup(btn))
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -2024,7 +2022,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [[
                 InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
                 ]]
-        dlt = await message.reply_sticker('CAACAgIAAxkBAAIBFWTbzDurSS5JY7PS_3zZClgPe_n8AAJxCAAChJRBSW9oCRqmu85zHgQ', reply_markup=InlineKeyboardMarkup(btn))
+        dlt = await message.reply_sticker('CAACAgIAAxkBAAECtcVktT1nnSIDQxFolMoMZkBb-7BUKwACaAEAAhAabSL1Nxwp9hekbx4E', reply_markup=InlineKeyboardMarkup(btn))
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
     # if 'is_shortlink' in settings.keys():
@@ -2162,10 +2160,10 @@ async def auto_filter(client, msg, spoll=False):
                 cap += f"<b>\n📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.') and not x.startswith('tg') and not x.startswith('telegram'), file.file_name.split()))}\n</a></b>"
     else:
         if settings["button"]:
-            cap = f"<b>👋️ 𝖧𝖾𝗒 {message.from_user.mention}\n📁 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌 𝖠𝗋𝖾 𝖱𝖾𝖺𝖽𝗒 ☞ {search}\n♨️ 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 ☞ {message.chat.title}</b>"
+            cap = f"<b>👋 𝖧𝖾𝗒 ☞ {message.from_user.mention}\n📁 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌 𝖠𝗋𝖾 𝖱𝖾𝖺𝖽𝗒 ☞ {search}\n⏱️ ʀᴇsᴜʟᴛ sʜᴏᴡ ɪɴ ☞ {remaining_seconds} sᴇᴄᴏɴᴅs\n♨️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ☞ : {message.chat.title}</b>"
         else:
             # cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
-            cap = f"<b>Hᴇʏ {message.from_user.mention}, Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs ғᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}\n\n</b>"
+            cap = f"<b>👋 Hᴇʏ {message.from_user.mention}, Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs ғᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}\n\n</b>"
             cap+="<b><u>📚 Requested Files 👇</u></b>\n\n"
             for file in files:
                 cap += f"<b>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.') and not x.startswith('tg') and not x.startswith('telegram'), file.file_name.split()))}\n\n</a></b>"

@@ -38,7 +38,7 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-                    InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="tg://settings")
+                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                   ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -57,9 +57,8 @@ async def save_group(bot, message):
                                                  video=(MELCOW_VID),
                                                  caption=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
                                                  reply_markup=InlineKeyboardMarkup(
-                                                                         [[
-                                                                           InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="tg://settings")
-                  ]]
+                                                                         [[                                                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                                                                         ]]
                                                  ),
                                                  parse_mode=enums.ParseMode.HTML
                 )
@@ -83,8 +82,8 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="tg://settings")
-                  ]]
+            InlineKeyboardButton('❣️ Owner ❣️', url="tg://settings")
+        ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
